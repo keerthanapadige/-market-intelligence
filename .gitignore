@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+env/
+venv/
+.env
+
+# Data files (Don't push raw data to GitHub!)
+data/*.csv
+data/*.json
+data/*.parquet
+data/raw/
+data/processed/
+
+# IDE files
+.vscode/
+.idea/
+
+# DuckDB files
+*.db
+*.wal

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_stock_prices
+    description: "Cleaned staging data for stock prices."
+    columns:
+      - name: ticker
+        description: "The stock ticker symbol (e.g., AAPL)."
+        tests:
+          - not_null
+      - name: price_date
+        description: "The date of the stock price."
+        tests:
+          - not_null
+
+  - name: fct_stock_performance
+    description: "Fact table calculating daily returns."
+    columns:
+      - name: daily_return_pct
+        description: "The percentage change from the previous day's close."
+        # We can add custom tests here later!

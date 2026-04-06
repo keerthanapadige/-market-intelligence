@@ -1,0 +1,29 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'market_intelligence'
+version: '1.0.0'
+
+# Use our custom profile
+profile: 'market_intelligence'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  market_intelligence:
+    # All models in the 'marts' folder will be tables
+    marts:
+      +materialized: table
+    # All models in the 'staging' folder will be views
+    staging:
+      +materialized: view
